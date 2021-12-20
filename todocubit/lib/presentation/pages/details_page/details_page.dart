@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:todocubit/task.dart';
+import 'package:todocubit/task_widget.dart';
 
 class DetailsPage extends StatefulWidget {
   const DetailsPage({Key? key}) : super(key: key);

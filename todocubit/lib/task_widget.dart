@@ -1,10 +1,12 @@
 import 'package:flutter/material.dart';
-import 'package:todocubit/pages/details_page.dart';
+import 'package:google_fonts/google_fonts.dart';
 
-class Task extends StatelessWidget {
-  final String? title;
-  final String? description;
-  Task({this.title, this.description});
+class TaskWidget extends StatelessWidget {
+  final String title;
+  final String description;
+  final int id;
+  TaskWidget(
+      {required this.title, required this.description, required this.id});
 
   @override
   Widget build(BuildContext context) {
@@ -16,21 +18,24 @@ class Task extends StatelessWidget {
         width: double.infinity,
         padding: EdgeInsets.symmetric(
           vertical: 32.0,
-          horizontal: 24.0,
+          horizontal: 32.0,
         ),
-        margin: EdgeInsets.only(
-          bottom: 20.0,
-        ),
+        margin: EdgeInsets.fromLTRB(10.0, 10.0, 10.0, 10.0),
         decoration: BoxDecoration(
-          color: Colors.grey,
-          borderRadius: BorderRadius.circular(10.0),
+          gradient: LinearGradient(
+            colors: [Color(0xFF7349FE), Colors.green],
+            begin: Alignment(0.0, -1.0),
+            end: Alignment(0.0, 2.0),
+          ),
+          borderRadius: BorderRadius.circular(20.0),
         ),
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             Text(
-              title ?? "Unnamed task",
-              style: TextStyle(
+              title,
+              style: GoogleFonts.lato(
+                color: Colors.white,
                 fontSize: 24.0,
                 fontWeight: FontWeight.bold,
               ),
@@ -41,7 +46,10 @@ class Task extends StatelessWidget {
               ),
             ),
             Text(
-              description ?? "No description",
+              description,
+              style: GoogleFonts.lato(
+                color: Colors.white,
+              ),
             ),
           ],
         ),
