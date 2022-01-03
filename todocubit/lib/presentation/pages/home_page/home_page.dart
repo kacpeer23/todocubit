@@ -7,6 +7,7 @@ import 'package:google_fonts/google_fonts.dart';
 
 class HomePage extends StatefulWidget {
   const HomePage({Key? key}) : super(key: key);
+  // final List<TaskWidget> tasks;
 
   @override
   _HomePageState createState() => _HomePageState();

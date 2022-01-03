@@ -12,7 +12,7 @@ class TaskWidget extends StatelessWidget {
   Widget build(BuildContext context) {
     return GestureDetector(
       onTap: () {
-        Navigator.pushNamed(context, '/detailspage');
+        Navigator.pushNamed(context, '/detailspage', arguments: id);
       },
       child: Container(
         width: double.infinity,
@@ -56,4 +56,11 @@ class TaskWidget extends StatelessWidget {
       ),
     );
   }
+}
+
+class Task {
+  final String description;
+  final String title;
+  final int id;
+  Task({required this.title, required this.description, required this.id});
 }

@@ -1,6 +1,7 @@
 import 'dart:math';
 
-import 'package:todocubit/data/models/task.dart';
+// import 'package:todocubit/data/models/task.dart';
+import 'package:todocubit/task_widget.dart';
 
 class TaskProvider {
   Future<List<Task>> getTasks() async {
@@ -20,6 +21,12 @@ class TaskProvider {
         id: Random().nextInt(100000000)));
   }
 
+  Future<Task> getTask(id) async {
+    await Future.delayed(Duration(seconds: 1));
+    final task = _taskList.firstWhere((element) => element.id == id);
+    return task;
+  }
+
   final List<Task> _taskList = [
     // to musi być w local storage
     Task(
@@ -29,7 +36,7 @@ class TaskProvider {
     ),
     Task(
       description:
-          'Hello i want to play csgo lal,fdsalf,dslgamsdlkgmsadlkgmaksldgalsdgasdgudsghiasuodfsdaljfnasdkjlfnsdjfasn lnbljdsanbljsdanbljasduydsafuhsdfnsdmfn sadfm.sdnfasdfjalsdfnhsdjfnasldglasjdgnsdaljgnsaldjgnasldjgnasdljgnasl',
+          'alf,dslgamsdlkgmsadlkgmaksldgalsdgasdgudsghiasuodfsdaljfnasdkjlfnsdjfasn lnbljdsanbljsdanbljasduydsafuhsdfnsdmfn sadfm.sdnfasdfjalsdfnhsdjfnasldglasjdgnsdaljgnsaldjgnasldjgnasdljgnasl',
       title: 'Jakub',
       id: 2,
     ),
@@ -44,7 +51,7 @@ class TaskProvider {
       id: 4,
     ),
     Task(
-      description: 'Hello i want to fff ',
+      description: 'abcdeefghj ',
       title: 'Seba',
       id: 5,
     ),
