@@ -1,19 +1,27 @@
 import 'dart:math';
 
 // import 'package:todocubit/data/models/task.dart';
+import 'package:cloud_firestore/cloud_firestore.dart';
+import 'package:todocubit/api/firebase_api.dart';
 import 'package:todocubit/task_widget.dart';
 
 class TaskProvider {
   Future<List<Task>> getTasks() async {
-    // to musi pobierać z local storage
+    FirebaseFirestore.instance
+        .collection('tasks')
+        .get()
+        .then((QuerySnapshot querySnapshot) {
+      querySnapshot.docs.forEach((task1) {
+        print(task1["first_name"]);
+      });
+    });
+
     await Future.delayed(Duration(seconds: 1));
     return _taskList;
   }
 
   Future<void> addTask(
-      // to musi dodawać do logal storage
-      {required String title,
-      required String description}) async {
+      {required String title, required String description}) async {
     await Future.delayed(Duration(seconds: 1));
     _taskList.add(Task(
         title: title,

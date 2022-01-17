@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "758958750662",
+    "project_id": "todocubit",
+    "storage_bucket": "todocubit.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:758958750662:android:a00978ab218c41f02390c7",
+        "android_client_info": {
+          "package_name": "com.example.todocubit"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "758958750662-80rngihvj5nembrhguisegpqgqv2203u.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDzsBXGW_-gvuHGAPP1sAb9FbIZh0sBYwQ"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "758958750662-80rngihvj5nembrhguisegpqgqv2203u.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

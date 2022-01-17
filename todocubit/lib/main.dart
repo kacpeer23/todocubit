@@ -1,10 +1,13 @@
+import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
 import 'package:todocubit/presentation/pages/add_task_page/addtask_page.dart';
 import 'package:todocubit/presentation/pages/details_page/details_page.dart';
 import 'package:todocubit/presentation/pages/home_page/home_page.dart';
 import 'package:todocubit/task_widget.dart';
 
-void main() {
+Future<void> main() async {
+  WidgetsFlutterBinding.ensureInitialized();
+  await Firebase.initializeApp();
   runApp(MyApp());
 }
 
